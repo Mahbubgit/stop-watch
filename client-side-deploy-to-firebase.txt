@@ -1,0 +1,92 @@
+************************************************
+> Create Firebase Project
+************************************************
+> Add Project
+> stop-watch[project_name]
+> Continue
+> Disable (Enable Google Analytics for this project)
+> Create project
+> Continue
+
+------Authentication if needed(Email/Password & Google)-----
+
+> Authentication > Get started >
+> Select Google > Enable > Set Email > Save
+> Add new provider > Email/Password > Enable > Save
+**************************************************
+-----------Project Settings-----------------
+
+> Click App icon > stop-watch > Register App
+> npm install firebase(run on client side cmd)
+> Copy initialise Firebase SDK 
+and paste into firebase.init.js(create into src folder) file
+
+*******************************************************
+*****firebase.init.js and .env.local configuration*****
+*******************************************************
+
+> Create firebase.init.js into src folder and paste
+> Select package.json file and create another file 
+.env.local
+> Update .env.local file
+(
+> alt + mouse click to select all line
+> ctrl + shift + right arrow > ctrl + c(to copy)
+> paste to .env.local file
+> next mouse pointer set at first location
+> alt + mouse click to select all line(mouse pointer set at first)
+> add REACT_APP_
+> ctrl + shift + right arrow(to select all right portion)
+> ctrl + shift + p > transform to uppercase 
+> right arrow > =
+> Go to firebse.init.js > right arrow(multi cursor)
+> shift + End(to select only double quotation value)
+> shift + left arrow(to select only quotation value)
+> ctrl + x(cut)
+> Go to .env.local file > paste
+
+> put _(underscore) like 
+APIKEY(API_KEY),
+MESSAGINGSENDERID(MESSAGING_SENDER_ID)
+
+> go to begin of a line
+> alt + mouse click to select all line
+> ctrl + shift + right arrow > ctrl + c
+> Go to firebase.init.js file
+> cut "" 
+> process.env. > ctrl + v(paste)
+> Go to firebase.init.js file
+> add three following lines in the file:
+
+>>>import { getAuth } from 'firebase/auth';(on the top)
+>>> const auth = getAuth(app);(at the end )
+>>> export default auth;(at the end )
+> save two files
+)
+*********************End****************************
+*****************************************
+**Client Side Deployment from Firebase**
+*****************************************
+
+> Go to Firebase > Select your Project >
+> Build > Hosting > Get Started >
+> npm install -g firebase-tools
+(One time for one PC)
+> firebase login
+(One time for one project - run on client side-> ctrl+j)
+> firebase init
+> Proceed? Y
+> Select hosting > spacebar > enter
+> use an existing project > enter
+> select your project > enter
+> Public directory? > build > enter
+> single-page app > y (must) > enter
+> deploys with GitHub> N > enter
+*************Done**************************************
+*******Commit and push Client side code to GitHub******
+*******************************************************
+> npm run build[for each time deployment]
+> firebase deploy[for each time deployment]
+> get your Live Site URL Link
+
+Link: https://stop-watch-59071.web.app

@@ -14,7 +14,6 @@ export default function ControlButtons(props) {
                 onClick={props.handleStart}>
                 Start
             </div>
-
             <div className="btn btn-one"
                 onClick={props.handleReset}>
                 Reset
