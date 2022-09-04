@@ -85,6 +85,10 @@ MESSAGINGSENDERID(MESSAGING_SENDER_ID)
 *************Done**************************************
 *******Commit and push Client side code to GitHub******
 *******************************************************
+>update code
+>git add . > git commit -m "updated comment" > git push
+
+******************For Deploy**************************
 > npm run build[for each time deployment]
 > firebase deploy[for each time deployment]
 > get your Live Site URL Link
