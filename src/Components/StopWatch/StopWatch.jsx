@@ -40,15 +40,16 @@ function StopWatch() {
 
 	return (
 		<div className="stop-watch">
-			<h1 className='font-bold' style={{ fontSize: 48, color: "lightblue" }}>Stop Watch</h1>
+			<h1 className='font-bold' style={{fontSize:48, color:"lightblue"}}>Stop Watch</h1>
 			<Timer time={time} />
-			<ControlButtons>
+			
+			<ControlButtons
 				active={isActive}
 				isPaused={isPaused}
 				handleStart={handleStart}
 				handlePauseResume={handlePauseResume}
 				handleReset={handleReset}
-			</ControlButtons>
+			/>
 		</div>
 	);
 }
